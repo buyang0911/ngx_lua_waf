@@ -32,9 +32,9 @@ nginx安装路径假设为:/usr/local/nginx/conf/
 在nginx.conf的http段添加
 
 	lua_package_path "/usr/local/nginx/conf/waf/?.lua";
-        lua_shared_dict limit 10m;
-        init_by_lua_file  /usr/local/nginx/conf/waf/init.lua; 
-    	access_by_lua_file /usr/local/nginx/conf/waf/waf.lua;
+	lua_shared_dict limit 10m;
+	init_by_lua_file  /usr/local/nginx/conf/waf/init.lua; 
+	access_by_lua_file /usr/local/nginx/conf/waf/waf.lua;
 
 配置config.lua里的waf规则目录(一般在waf/conf/目录下)
 
@@ -47,7 +47,7 @@ nginx安装路径假设为:/usr/local/nginx/conf/
 
 ###配置文件详细说明：
 
-    	RulePath = "/usr/local/nginx/conf/waf/wafconf/"
+        RulePath = "/usr/local/nginx/conf/waf/wafconf/"
         --规则存放目录
         attacklog = "off"
         --是否开启攻击信息记录，需要配置logdir
