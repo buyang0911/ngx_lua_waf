@@ -31,7 +31,7 @@ nginx安装路径假设为:/usr/local/nginx/conf/
 
 在nginx.conf的http段添加
 
-		lua_package_path "/usr/local/nginx/conf/waf/?.lua";
+	lua_package_path "/usr/local/nginx/conf/waf/?.lua";
         lua_shared_dict limit 10m;
         init_by_lua_file  /usr/local/nginx/conf/waf/init.lua; 
     	access_by_lua_file /usr/local/nginx/conf/waf/waf.lua;
@@ -118,21 +118,5 @@ nginx安装路径假设为:/usr/local/nginx/conf/
 	日志文件名称格式如下:虚拟主机名_sec.log
 
 
-## Copyright
-
-<table>
-  <tr>
-    <td>Weibo</td><td>神奇的魔法师</td>
-  </tr>
-  <tr>
-    <td>Forum</td><td>http://bbs.linuxtone.org/</td>
-  </tr>
-  <tr>
-    <td>Copyright</td><td>Copyright (c) 2013- loveshell</td>
-  </tr>
-  <tr>
-    <td>License</td><td>MIT License</td>
-  </tr>
-</table>
 	
 感谢ngx_lua模块的开发者[@agentzh](https://github.com/agentzh/),春哥是我所接触过开源精神最好的人
